@@ -3,17 +3,10 @@ import './App.css';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 
-const FriendsList = () => {
-  return (<h2>FriendList</h2>)
-}
+import Login from './Components/Login';
+import FriendsList from './Components/FriendsList';
+import AddFriend from './Components/AddFriend';
 
-const AddFriend = () => {
-  return (<h2>AddFriend</h2>)
-}
-
-const Login = () => {
-  return (<h2>Login</h2>)
-}
 
 function App() {
   return (
