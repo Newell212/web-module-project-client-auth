@@ -8,6 +8,8 @@ import FriendsList from './Components/FriendsList';
 import AddFriend from './Components/AddFriend';
 import Logout from './Components/Logout';
 
+import PrivateRoute from './Components/PrivateRoute';
+
 function App() {
   return (
    
@@ -28,15 +30,9 @@ function App() {
           <Route exact path="/login">
             <Login />
           </Route>
-          <Route exact path="/friends">
-            <FriendsList />
-          </Route>
-          <Route exact path="/friends/add">
-            <AddFriend />
-          </Route>
-          <Route exact path="/logout">
-            <Logout />
-          </Route>
+          <PrivateRoute exact path="/friends" component={FriendsList}/>
+          <PrivateRoute exact path="/friends/add" component={AddFriend}/>
+          <PrivateRoute exact path="/logout" component={Logout}/>
           </Switch>
         </Router>
       </div>
